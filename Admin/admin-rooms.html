@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin — Rooms</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="admin-dashboard.html"><span class="logo">HB</span><div><div style="font-weight:700">Hotel Booking — Admin</div><div style="font-size:12px;color:var(--muted-text)">Rooms</div></div></a>
+      <nav class="topnav">
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="admin-bookings.html">Bookings</a>
+        <a class="active" href="admin-rooms.html">Rooms</a>
+        <a href="admin-guests.html">Guests</a>
+        <a href="admin-reports.html">Reports</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Room Management</h1>
+        <div>
+          <a class="btn small" href="#">+ Add Room</a>
+          <a class="btn small secondary" href="#">Bulk Actions</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+          <input class="input" placeholder="Search rooms..." />
+          <select class="input"><option>All Floors</option><option>Floor 1</option></select>
+          <select class="input"><option>All Status</option><option>Available</option><option>Occupied</option></select>
+          <select class="input"><option>All Types</option><option>Standard</option><option>Deluxe</option></select>
+        </div>
+
+        <div class="grid grid-3" style="margin-top:12px;">
+          <!-- Room card 1 -->
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r1.jpg" alt="Room 101" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 101</strong><div class="kicker">Standard</div></div>
+              <div><span class="badge success">Available</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+          </div>
+
+          <!-- Room card 2 -->
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r2.jpg" alt="Room 102" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 102</strong><div class="kicker">Standard</div></div>
+              <div><span class="badge">Occupied</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+          </div>
+
+          <!-- Room card 3 -->
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r3.jpg" alt="Room 201" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 201</strong><div class="kicker">Deluxe</div></div>
+              <div><span class="badge success">Available</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+            <!-- Room card 3 -->
+          </div>
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r4.jpg" alt="Room 201" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 202</strong><div class="kicker">Deluxe</div></div>
+              <div><span class="badge success">Available</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+            <!-- Room card 5 -->
+          </div>
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r5.jpg" alt="Room 201" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 301</strong><div class="kicker">Deluxe</div></div>
+              <div><span class="badge success">Available</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+          </div>
+          <!-- Room card 6 -->
+          <div class="card">
+            <div style="height:140px;border-radius:8px;overflow:hidden;margin-bottom:12px">
+              <img src="images/r6.jpg" alt="Room 201" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div><strong>Room 302</strong><div class="kicker">Deluxe</div></div>
+              <div><span class="badge success">Available</span></div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn small" href="#">View</a>
+              <a class="btn small secondary" href="#">Edit</a>
+            </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

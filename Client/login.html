@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Hotel Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll(".topnav a").forEach(a => {
+        if (a.getAttribute("href") === current) a.classList.add("active");
+      });
+    });
+
+    function validateLogin() {
+      let email = document.getElementById("loginEmail").value.trim();
+      let password = document.getElementById("loginPassword").value;
+
+      // Check empty fields
+      if (email === "" || password === "") {
+        alert("Please fill out all fields.");
+        return false;
+      }
+
+      // Validate email format (example@domain.com)
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.match(emailPattern)) {
+        alert("Invalid email format!");
+        return false;
+      }
+
+      // Password length check
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long!");
+        return false;
+      }
+
+      alert("Login Successful!");
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="client-home.html">
+        <span class="logo">HB</span>
+        <div>
+          <div style="font-weight:700">Hotel Booking</div>
+          <div style="font-size:12px;color:var(--muted-text)">Sign In</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a href="client-home.html">Home</a>
+        <a href="room-selection.html">Rooms</a>
+        <a href="booking-form.html">Booking</a>
+        <a href="payment.html">Payment</a>
+        <a href="confirmation.html">Confirmation</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <br><br>
+
+    <main class="center" style="flex-direction:column;text-align:center;">
+      <section class="card" style="max-width:400px;width:100%;">
+        <h2 style="margin-top:0;">Welcome Back!</h2>
+        <p class="kicker">Login to your account to continue booking</p>
+
+        <!-- ✅ VALIDATION ADDED HERE -->
+        <form id="loginForm" onsubmit="return validateLogin()" style="margin-top:16px;">
+          <label class="label">Email</label>
+          <input type="email" id="loginEmail" class="input full" placeholder="example@email.com">
+
+          <label class="label">Password</label>
+          <input type="password" id="loginPassword" class="input full" placeholder="Enter your password">
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#" style="font-size:14px;color:var(--primary);text-decoration:none;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn" style="margin-top:16px;">Login</button>
+        </form>
+
+        <p class="kicker" style="margin-top:12px;">Don’t have an account?
+          <a href="signup.html" style="color:var(--primary);text-decoration:none;">Sign Up</a>
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

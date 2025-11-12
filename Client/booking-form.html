@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Details</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll(".topnav a").forEach(a => {
+        if (a.getAttribute("href") === current) a.classList.add("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="client-home.html">
+        <span class="logo">HB</span>
+        <div><div style="font-weight:700">Hotel Booking</div><div style="font-size:12px;color:var(--muted-text)">Guest Info</div></div>
+      </a>
+      <nav class="topnav">
+        <a href="client-home.html">Home</a>
+        <a href="room-selection.html">Rooms</a>
+        <a href="booking-form.html">Booking</a>
+        <a href="payment.html">Payment</a>
+        <a href="confirmation.html">Confirmation</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Enter Your Details</h1>
+        <div class="kicker">Please provide your booking info</div>
+      </div>
+
+      <section class="card">
+        <div class="form-row">
+          <div class="full">
+            <label class="label">Full Name</label>
+            <input class="input full" placeholder="John Doe" />
+          </div>
+          <div class="full">
+            <label class="label">Email</label>
+            <input class="input full" type="email" placeholder="example@email.com" />
+          </div>
+          <div class="full">
+            <label class="label">Phone</label>
+            <input class="input full" type="tel" placeholder="+91 98765 43210" />
+          </div>
+        </div>
+        <div style="margin-top:16px;">
+          <a href="payment.html" class="btn">Continue to Payment</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

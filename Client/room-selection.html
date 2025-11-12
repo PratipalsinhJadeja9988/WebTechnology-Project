@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Available Rooms</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll(".topnav a").forEach(a => {
+        if (a.getAttribute("href") === current) a.classList.add("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="client-home.html">
+        <span class="logo">HB</span>
+        <div><div style="font-weight:700">Hotel Booking</div><div style="font-size:12px;color:var(--muted-text)">Available Rooms</div></div>
+      </a>
+      <nav class="topnav">
+        <a href="client-home.html">Home</a>
+        <a href="room-selection.html">Rooms</a>
+        <a href="booking-form.html">Booking</a>
+        <a href="payment.html">Payment</a>
+        <a href="confirmation.html">Confirmation</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Choose Your Room</h1>
+        <div class="kicker">Select from our best available rooms</div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="height:160px;overflow:hidden;border-radius:8px;">
+            <img src="images/r1.jpg" alt="Deluxe Room" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Deluxe Room</h3>
+          <p class="kicker">King bed, Wi-Fi, breakfast included</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+            <strong>$199/night</strong>
+            <a href="booking-form.html" class="btn small">Book</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="height:160px;overflow:hidden;border-radius:8px;">
+            <img src="images/r2.jpg" alt="Executive Suite" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Executive Suite</h3>
+          <p class="kicker">Luxury amenities with city view</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+            <strong>$289/night</strong>
+            <a href="booking-form.html" class="btn small">Book</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="height:160px;overflow:hidden;border-radius:8px;">
+            <img src="images/r3.jpg" alt="Family Room" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3>Family Room</h3>
+          <p class="kicker">2 double beds, balcony view</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+            <strong>$249/night</strong>
+            <a href="booking-form.html" class="btn small">Book</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

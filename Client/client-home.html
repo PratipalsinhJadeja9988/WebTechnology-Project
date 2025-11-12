@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Booking — Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll(".topnav a").forEach(a => {
+        if (a.getAttribute("href") === current) a.classList.add("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="client-home.html">
+        <span class="logo">HB</span>
+        <div>
+          <div style="font-weight:700">Find Your Perfect Hotels</div>
+          <div style="font-size:12px;color:var(--muted-text)">Find your stay</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a href="client-home.html">Home</a>
+        <a href="room-selection.html">Rooms</a>
+        <a href="booking-form.html">Booking</a>
+        <a href="payment.html">Payment</a>
+        <a href="confirmation.html">Confirmation</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Search Hotels</h1>
+        <div class="kicker">Plan your perfect stay</div>
+      </div>
+
+      <section class="card">
+        <div class="form-row">
+          <div style="flex:2">
+            <label class="label">Destination</label>
+            <input class="input full" placeholder="City or Hotel Name" />
+          </div>
+          <div>
+            <label class="label">Check-in</label>
+            <input type="date" class="input full" />
+          </div>
+          <div>
+            <label class="label">Check-out</label>
+            <input type="date" class="input full" />
+          </div>
+          <div>
+            <label class="label">Guests</label>
+            <select class="input full">
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>3 Guests</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:16px;">
+          <a href="room-selection.html" class="btn">Search Hotels</a>
+        </div>
+      </section>
+
+      <section class="card mt-12">
+        <h3 style="margin-top:0;">Popular Destinations</h3>
+        <div class="grid grid-3" style="margin-top:12px;">
+          <div class="card">
+            <div style="height:140px;overflow:hidden;border-radius:8px;">
+              <img src="images/nkh.jpg" alt="New York" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="margin-top:8px;"><strong>New York</strong><div class="kicker">From $189/night</div></div>
+          </div>
+          <div class="card">
+            <div style="height:140px;overflow:hidden;border-radius:8px;">
+              <img src="images/ph.jpg" alt="Paris" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="margin-top:8px;"><strong>Paris</strong><div class="kicker">From $156/night</div></div>
+          </div>
+          <div class="card">
+            <div style="height:140px;overflow:hidden;border-radius:8px;">
+              <img src="images/th.jpg" alt="Tokyo" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="margin-top:8px;"><strong>Tokyo</strong><div class="kicker">From $134/night</div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
